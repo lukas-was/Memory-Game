@@ -61,7 +61,8 @@ const playGame = function () {
       if (wins === maxWins) {
         const endTime = new Date().getTime() / 1000;
         const gameTime = Math.floor(endTime - startTime);
-        title.textContent = `Wygrałeś! Twój czas to ${gameTime}s.`;
+        title.textContent = `Brawo! Twój czas to ${gameTime}s.`;
+        title.style.fontSize = "20px";
       }
     } else {
       setTimeout(function () {
