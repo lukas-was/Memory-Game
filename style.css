@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-image: url("img/binding_dark.png");
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10vh;
+    color: rgb(255, 255, 255);
+    user-select: none;
+}
+
+h2 {
+    flex-grow: 1;
+    margin-left: 20px;
+    letter-spacing: -1px;
+    font-size: 30px;
+}
+
+i.start {
+    animation: rotateBrain 60s infinite steps(60);
+}
+
+@keyframes rotateBrain {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#buttonStart,
+#buttonRestart {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    margin-right: 20px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+
+#buttonRestart {
+    display: none;
+}
+
+#buttonStart:active,
+#buttonRestart:active {
+    background-color: orange;
+    color: white;
+}
+
+.info {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    height: 30vh;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 0 40px;
+}
+
+section.gameboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 90vh;
+}
+
+.card {
+    flex-basis: 32%;
+    height: 14vh;
+    border-radius: 8px;
+    transition: .15s;
+}
+
+@media (orientation : landscape) {
+    header {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 20vh;
+    }
+
+    h2 {
+        flex-grow: 0;
+        font-size: 40px;
+        text-shadow: 0 0 5px black;
+    }
+
+    #buttonStart,
+    #buttonRestart {
+        margin-bottom: 10px;
+        background-color: white;
+        color: black;
+        box-shadow: 0 0 0 2px black;
+        transition: .2s;
+        font-size: 20px;
+    }
+
+    #buttonStart:hover,
+    #buttonRestart:hover {
+        background-color: orange;
+        color: white;
+        letter-spacing: 3px;
+    }
+
+    .info {
+        top: 20%;
+        padding: 0 20%;
+    }
+
+    .card {
+        flex-basis: 16%;
+        height: 32%;
+    }
+
+    section.gameboard {
+        height: 80vh;
+        padding: 0 22% 3% 22%;
+    }
+
+    .card.hidden:hover {
+        transform: scale(1.06) rotate(3deg);
+        background-color: rgba(0, 51, 51, 0.9);
+    }
+}
+
+.red {
+    background-color: red;
+    box-shadow: 0 0 0 2px black;
+}
+
+.green {
+    background-color: limegreen;
+    box-shadow: 0 0 0 2px black;
+}
+
+.blue {
+    background-color: royalblue;
+    box-shadow: 0 0 0 2px black;
+}
+
+.yellow {
+    background-color: yellow;
+    box-shadow: 0 0 0 2px black;
+}
+
+.orange {
+    background-color: orange;
+    box-shadow: 0 0 0 2px black;
+}
+
+.violet {
+    background-color: violet;
+    box-shadow: 0 0 0 2px black;
+}
+
+.cyan {
+    background-color: cyan;
+    box-shadow: 0 0 0 2px black;
+}
+
+.pink {
+    background-color: pink;
+    box-shadow: 0 0 0 2px black;
+}
+
+.sienna {
+    background-color: sienna;
+    box-shadow: 0 0 0 2px black;
+}
+
+.card.hidden {
+
+    background-color: rgb(0, 37, 37);
+    border: 3px solid rgba(107, 84, 40, 0.9);
+    box-shadow: 0 0 0 2px black;
+    cursor: pointer;
+}
